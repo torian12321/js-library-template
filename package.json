@@ -9,7 +9,7 @@
     "format:check": "eslint",
     "test": "vitest run",
     "test:watch": "vitest --ui",
-    "prepublishOnly": "npm run test"
+    "prepublishOnly": "npm run build && npm run test"
   },
   "publishConfig": {
     "access": "public",
@@ -19,11 +19,20 @@
     "type": "git",
     "url": "git+https://github.com/torian12321/js-library-template.git"
   },
+  "main": "./dist/js-library-template.js",
+  "module": "./dist/js-library-template.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "exports": {
-    ".": "./src/index.ts"
+    ".": {
+      "import": "./dist/js-library-template.js",
+      "types": "./dist/index.d.ts"
+    }
   },
   "devDependencies": {
-    "@torian12321/eslint-config": "0.0.5",
+    "@torian12321/eslint-config": "0.0.7",
     "@torian12321/prettier-config": "0.0.2",
     "@torian12321/typescript-config": "0.0.1",
     "@types/node": "^20.19.1",
