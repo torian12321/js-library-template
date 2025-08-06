@@ -1,9 +1,17 @@
-import { afterEach, beforeEach } from 'vitest';
+import { afterAll, afterEach, beforeAll, beforeEach } from 'vitest';
+
+beforeAll(() => {
+  // Add your global beforeAll logics
+});
 
 beforeEach(() => {
-  // do nothing
+  // Add your globalbeforeEach logics
+});
+
+afterAll(() => {
+  // Add your global afterAll logics
 });
 
 afterEach(() => {
-  // do nothing
+  // Add your global afterEach logics
 });

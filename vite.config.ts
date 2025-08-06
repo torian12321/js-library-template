@@ -1,13 +1,20 @@
 import { resolve } from 'path';
 
+import dts from 'vite-plugin-dts';
 import { defineConfig } from 'vitest/config';
 
 export default defineConfig({
+  plugins: [
+    dts({
+      insertTypesEntry: true,
+    }),
+  ],
   build: {
     lib: {
       entry: resolve(__dirname, 'src/index.ts'),
       name: '@torian12321/js-library-template',
       fileName: 'js-library-template',
+      formats: ['es'],
     },
     rollupOptions: {
       output: {
