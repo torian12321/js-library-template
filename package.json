@@ -19,16 +19,21 @@
     "type": "git",
     "url": "git+https://github.com/torian12321/js-library-template.git"
   },
-  "main": "./dist/js-library-template.js",
+  "files": [
+    "dist/*.js",
+    "dist/*.cjs",
+    "dist/index.d.ts",
+    "dist/src/greet.d.ts",
+    "dist/src/index.d.ts"
+  ],
+  "main": "./dist/js-library-template.cjs",
   "module": "./dist/js-library-template.js",
   "types": "./dist/index.d.ts",
-  "files": [
-    "dist"
-  ],
   "exports": {
     ".": {
+      "types": "./dist/index.d.ts",
       "import": "./dist/js-library-template.js",
-      "types": "./dist/index.d.ts"
+      "require": "./dist/js-library-template.cjs"
     }
   },
   "devDependencies": {
@@ -41,6 +46,7 @@
     "eslint": "^9.30.1",
     "globals": "^16.3.0",
     "prettier": "^3.6.2",
+    "rollup-plugin-visualizer": "^6.0.3",
     "typescript": "^5.8.3",
     "vite": "^7.0.0",
     "vite-plugin-dts": "^4.5.4",
