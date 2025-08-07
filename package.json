@@ -1,15 +1,15 @@
 {
   "name": "@torian12321/js-library-template",
-  "version": "0.0.1",
+  "version": "0.0.3-alpha.4",
   "type": "module",
   "prettier": "@torian12321/prettier-config",
   "scripts": {
-    "build": "tsc && vite build",
+    "build": "vite build",
     "format": "eslint --fix",
     "format:check": "eslint",
     "test": "vitest run",
     "test:watch": "vitest --ui",
-    "prepublishOnly": "npm run test"
+    "prepublishOnly": "npm run format:check && npm run test && npm run build"
   },
   "publishConfig": {
     "access": "public",
@@ -19,11 +19,21 @@
     "type": "git",
     "url": "git+https://github.com/torian12321/js-library-template.git"
   },
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/js-library-template.cjs",
+  "module": "./dist/js-library-template.js",
+  "types": "./dist/index.d.ts",
   "exports": {
-    ".": "./src/index.ts"
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/js-library-template.js",
+      "require": "./dist/js-library-template.cjs"
+    }
   },
   "devDependencies": {
-    "@torian12321/eslint-config": "0.0.5",
+    "@torian12321/eslint-config": "0.0.7",
     "@torian12321/prettier-config": "0.0.2",
     "@torian12321/typescript-config": "0.0.1",
     "@types/node": "^20.19.1",
@@ -32,8 +42,10 @@
     "eslint": "^9.30.1",
     "globals": "^16.3.0",
     "prettier": "^3.6.2",
+    "rollup-plugin-visualizer": "^6.0.3",
     "typescript": "^5.8.3",
     "vite": "^7.0.0",
+    "vite-plugin-dts": "^4.5.4",
     "vitest": "^3.2.4"
   }
 }
