@@ -1,4 +1,5 @@
 import { resolve } from 'path';
+
 import { visualizer } from 'rollup-plugin-visualizer';
 import dts from 'vite-plugin-dts';
 import { defineConfig } from 'vitest/config';
@@ -23,6 +24,7 @@ export default defineConfig({
         '**/*.test.tsx',
         '**/vitest.setup.ts',
         '**/vitest.setup.tsx',
+        'vite.config.ts',
       ],
     }),
     visualizer({

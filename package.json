@@ -1,15 +1,15 @@
 {
   "name": "@torian12321/js-library-template",
-  "version": "0.0.2",
+  "version": "0.0.3-alpha.4",
   "type": "module",
   "prettier": "@torian12321/prettier-config",
   "scripts": {
-    "build": "tsc && vite build",
+    "build": "vite build",
     "format": "eslint --fix",
     "format:check": "eslint",
     "test": "vitest run",
     "test:watch": "vitest --ui",
-    "prepublishOnly": "npm run build && npm run test"
+    "prepublishOnly": "npm run format:check && npm run test && npm run build"
   },
   "publishConfig": {
     "access": "public",
@@ -20,11 +20,7 @@
     "url": "git+https://github.com/torian12321/js-library-template.git"
   },
   "files": [
-    "dist/*.js",
-    "dist/*.cjs",
-    "dist/index.d.ts",
-    "dist/src/greet.d.ts",
-    "dist/src/index.d.ts"
+    "dist"
   ],
   "main": "./dist/js-library-template.cjs",
   "module": "./dist/js-library-template.js",
