@@ -6,6 +6,7 @@ import { defineConfig } from 'vitest/config';
 
 export default defineConfig({
   build: {
+    outDir: 'lib',
     lib: {
       entry: resolve(__dirname, 'src/index.ts'),
       name: '@torian12321/js-library-template',
