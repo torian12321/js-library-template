@@ -20,20 +20,20 @@
     "url": "git+https://github.com/torian12321/js-library-template.git"
   },
   "files": [
-    "dist"
+    "lib"
   ],
-  "main": "./dist/js-library-template.cjs",
-  "module": "./dist/js-library-template.js",
-  "types": "./dist/index.d.ts",
+  "main": "./lib/js-library-template.cjs",
+  "module": "./lib/js-library-template.js",
+  "types": "./lib/index.d.ts",
   "exports": {
     ".": {
-      "types": "./dist/index.d.ts",
-      "import": "./dist/js-library-template.js",
-      "require": "./dist/js-library-template.cjs"
+      "types": "./lib/index.d.ts",
+      "import": "./lib/js-library-template.js",
+      "require": "./lib/js-library-template.cjs"
     }
   },
   "devDependencies": {
-    "@torian12321/eslint-config": "0.0.7",
+    "@torian12321/eslint-config": "0.0.8-beta.4",
     "@torian12321/prettier-config": "0.0.2",
     "@torian12321/typescript-config": "0.0.1",
     "@types/node": "^24.2.0",
