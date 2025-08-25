@@ -2,7 +2,8 @@ documentation:
 - changed-files:
   - any-glob-to-any-file: [
     '**/*.md',
-    '**/*.mdx'
+    '**/*.mdx',
+    './docs/**/*'
   ]
 
 utils:
