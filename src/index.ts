@@ -1,2 +1,2 @@
 export { greet } from './greet';
-export { isBoolean } from './is/isBoolean';
+export { isBoolean, isString } from './is';
