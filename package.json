@@ -5,8 +5,8 @@
   "prettier": "@torian12321/prettier-config",
   "scripts": {
     "build": "vite build",
-    "format": "eslint --fix",
-    "format:check": "eslint",
+    "format": "eslint --fix && prettier --write .",
+    "format:check": "eslint && prettier --check .",
     "test": "vitest run",
     "test:watch": "vitest --ui",
     "prepublishOnly": "npm run format:check && npm run test && npm run build"
