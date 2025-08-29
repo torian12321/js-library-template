@@ -5,8 +5,8 @@
   "prettier": "@torian12321/prettier-config",
   "scripts": {
     "build": "vite build",
-    "format": "eslint --fix",
-    "format:check": "eslint",
+    "format": "eslint --fix && prettier --write .",
+    "format:check": "eslint && prettier --check .",
     "test": "vitest run",
     "test:watch": "vitest --ui",
     "prepublishOnly": "npm run format:check && npm run test && npm run build"
@@ -19,15 +19,16 @@
     "type": "git",
     "url": "git+https://github.com/torian12321/js-library-template.git"
   },
-  "files": ["dist/**/*"],
-  "main": "./dist/js-library-template.cjs",
-  "module": "./dist/js-library-template.js",
-  "types": "./dist/index.d.ts",
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
       "import": "./dist/js-library-template.js",
       "require": "./dist/js-library-template.cjs"
+    },
+    "./is": {
+      "types": "./dist/typeCheckers.d.ts",
+      "import": "./dist/typeCheckers.js",
+      "require": "./dist/typeCheckers.cjs"
     }
   },
   "devDependencies": {

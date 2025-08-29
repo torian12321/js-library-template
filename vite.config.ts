@@ -8,10 +8,12 @@ export default defineConfig({
   build: {
     outDir: 'dist',
     lib: {
-      entry: resolve(__dirname, 'src/index.ts'),
       name: '@torian12321/js-library-template',
-      fileName: 'js-library-template',
       formats: ['es', 'cjs'],
+      entry: {
+        'js-library-template': resolve(__dirname, 'src/index.ts'),
+        is: resolve(__dirname, 'src/is/index.ts'),
+      },
     },
   },
   resolve: {

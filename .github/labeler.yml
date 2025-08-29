@@ -1,18 +1,15 @@
 documentation:
-- changed-files:
-  - any-glob-to-any-file: [
-    '**/*.md',
-    '**/*.mdx'
-  ]
+  - changed-files:
+      - any-glob-to-any-file: ['**/*.md', '**/*.mdx', './docs/**/*']
 
 utils:
-- changed-files:
-  - any-glob-to-any-file: ['./src/**/*']
+  - changed-files:
+      - any-glob-to-any-file: ['./src/**/*']
 
 test 🔬:
-- changed-files:
-  - any-glob-to-any-file: ['./src/**/*.test.ts']
+  - changed-files:
+      - any-glob-to-any-file: ['./src/**/*.test.ts']
 
 github actions:
-- changed-files:
-  - any-glob-to-any-file: ['.github/**/*']
+  - changed-files:
+      - any-glob-to-any-file: ['.github/**/*']
