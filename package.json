@@ -35,7 +35,7 @@
     "@torian12321/eslint-config": "0.0.9",
     "@torian12321/prettier-config": "0.0.3",
     "@torian12321/typescript-config": "0.0.4",
-    "@types/node": "^24.3.0",
+    "@types/node": "^24.9.2",
     "@vitest/coverage-v8": "^3.2.4",
     "@vitest/ui": "^3.2.4",
     "eslint": "^9.33.0",
