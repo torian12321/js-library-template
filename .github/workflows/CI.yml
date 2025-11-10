@@ -16,6 +16,8 @@ jobs:
 
       - name: 🔧 Setup Node.js with NPM Registry and install dependencies
         uses: ./.github/actions/setup-node-with-npmrc
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: 🧪 Run tests
         run: npm run test
