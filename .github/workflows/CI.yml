@@ -14,10 +14,20 @@ jobs:
       - name: 📦 Checkout code
         uses: actions/checkout@v4
 
-      - name: 🔧 Setup Node.js with NPM Registry and install dependencies
-        uses: ./.github/actions/setup-node-with-npmrc
+      - name: 🔧 Setup Node.js
+        uses: actions/setup-node@v4
         with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
+          node-version: '22'
+          registry-url: 'https://npm.pkg.github.com'
+          scope: '@torian12321'
+
+      - name: 🔑 Prepare .npmrc from example
+        run: |
+          cp .npmrc.example .npmrc
+          sed -i "s|NPMRC_NODE_AUTH_TOKEN|${{ secrets.GITHUB_TOKEN }}|g" .npmrc
+
+      - name: 📦 Install dependencies
+        run: npm install
 
       - name: 🧪 Run tests
         run: npm run test
