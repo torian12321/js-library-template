@@ -17,7 +17,7 @@ export default defineConfig({
     },
   },
   resolve: {
-    alias: [{ find: 'src', replacement: './src' }],
+    alias: [{ find: 'src', replacement: resolve(__dirname, 'src') }],
   },
   plugins: [
     dts({

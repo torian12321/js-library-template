@@ -1,5 +1,11 @@
 {
   "extends": "@torian12321/typescript-config/vite",
   "include": [".", "src"],
-  "exclude": ["dist", "examples", "docs"]
+  "exclude": ["dist", "examples", "docs"],
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "src/*": ["src/*"]
+    }
+  }
 }

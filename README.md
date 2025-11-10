@@ -39,5 +39,5 @@ To the root of your project, add `.npmrc` file with the given content:
 ## Installation
 
 ```sh
-npm install eslint @torian12321/eslint-config --save-dev
+npm install @torian12321/js-library-template --save-dev
 ```
