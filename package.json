@@ -5,6 +5,7 @@
   "prettier": "@torian12321/prettier-config",
   "scripts": {
     "build": "vite build",
+    "build:docs": "typedoc",
     "format": "eslint --fix && prettier --write .",
     "format:check": "eslint && prettier --check .",
     "test": "vitest run",
@@ -36,14 +37,17 @@
     "@torian12321/prettier-config": "0.0.4",
     "@torian12321/typescript-config": "0.0.5",
     "@types/node": "^24.10.0",
-    "@vitest/coverage-v8": "^4.0.7",
-    "@vitest/ui": "^4.0.7",
+    "@vitest/coverage-v8": "^4.0.8",
+    "@vitest/ui": "^4.0.8",
     "eslint": "^9.39.1",
     "globals": "^16.5.0",
     "prettier": "^3.6.2",
     "rollup-plugin-visualizer": "^6.0.5",
-    "vite": "^7.2.0",
+    "typedoc": "^0.28.14",
+    "typedoc-github-theme": "^0.3.1",
+    "typedoc-material-theme": "^1.4.1",
+    "vite": "^7.2.2",
     "vite-plugin-dts": "^4.5.4",
-    "vitest": "^4.0.7"
+    "vitest": "^4.0.8"
   }
 }
