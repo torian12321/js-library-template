@@ -11,22 +11,8 @@ jobs:
   validate:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-
-      - name: 🔧 Setup Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: '22'
-          registry-url: 'https://npm.pkg.github.com'
-          scope: '@torian12321'
-
-      - name: 🔑 Prepare .npmrc from example
-        run: |
-          cp .npmrc.example .npmrc
-          sed -i "s|NPMRC_NODE_AUTH_TOKEN|${{ secrets.GITHUB_TOKEN }}|g" .npmrc
-
-      - name: 📦 Install dependencies
-        run: npm install
+      - name: 🔧 Setup Node.js with NPM Registry
+        uses: ./.github/actions/setup-node-with-npmrc
 
       - name: 🧪 Run tests
         run: npm run test

@@ -1,0 +1,27 @@
+name: 'Setup Node.js with NPM Registry'
+description: 'Checkout code, setup Node.js with GitHub package registry, prepare .npmrc, and install dependencies'
+
+runs:
+  using: 'composite'
+  steps:
+    - name: 📦 Checkout code
+      uses: actions/checkout@v4
+      shell: bash
+
+    - name: 🔧 Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '22'
+        registry-url: 'https://npm.pkg.github.com'
+        scope: '@torian12321'
+      shell: bash
+
+    - name: 🔑 Prepare .npmrc from example
+      run: |
+        cp .npmrc.example .npmrc
+        sed -i "s|NPMRC_NODE_AUTH_TOKEN|${{ secrets.GITHUB_TOKEN }}|g" .npmrc
+      shell: bash
+
+    - name: 📦 Install dependencies
+      run: npm install
+      shell: bash
