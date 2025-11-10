@@ -28,7 +28,6 @@ runs:
         node-version: ${{ inputs.node-version }}
         registry-url: ${{ inputs.registry-url }}
         scope: ${{ inputs.scope }}
-      shell: bash
 
     - name: 🔑 Prepare .npmrc from example
       run: |
