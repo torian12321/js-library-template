@@ -1,13 +1,9 @@
 name: 'Setup Node.js with NPM Registry'
-description: 'Checkout code, setup Node.js with GitHub package registry, prepare .npmrc, and install dependencies'
+description: 'Setup Node.js with GitHub package registry, prepare .npmrc, and install dependencies'
 
 runs:
   using: 'composite'
   steps:
-    - name: 📦 Checkout code
-      uses: actions/checkout@v4
-      shell: bash
-
     - name: 🔧 Setup Node.js
       uses: actions/setup-node@v4
       with:
