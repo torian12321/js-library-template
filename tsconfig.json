@@ -1,4 +1,5 @@
 {
   "extends": "@torian12321/typescript-config/vite",
-  "include": [".", "src"]
+  "include": [".", "src"],
+  "exclude": ["dist", "examples", "docs"]
 }
