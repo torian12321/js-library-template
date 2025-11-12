@@ -16,11 +16,6 @@ jobs:
 
       - name: 🔧 Setup NPM and Install Dependencies
         uses: ./.github/actions/setup-npm
-        with:
-          node-version: '22'
-          registry-url: 'https://npm.pkg.github.com'
-          scope: '@torian12321'
-          github-token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: 🧪 Run tests
         run: npm run test

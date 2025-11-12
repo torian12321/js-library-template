@@ -20,6 +20,9 @@
     "type": "git",
     "url": "git+https://github.com/torian12321/js-library-template.git"
   },
+  "files": [
+    "dist/**/*"
+  ],
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
@@ -27,9 +30,9 @@
       "require": "./dist/js-library-template.cjs"
     },
     "./is": {
-      "types": "./dist/typeCheckers.d.ts",
-      "import": "./dist/typeCheckers.js",
-      "require": "./dist/typeCheckers.cjs"
+      "types": "./dist/is.d.ts",
+      "import": "./dist/is.js",
+      "require": "./dist/is.cjs"
     }
   },
   "devDependencies": {

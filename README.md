@@ -27,14 +27,7 @@ Remove [`JS Library Template Usage`](#js-library-template-usage) block from docu
 
 ## Environment Setup
 
-To the root of your project, add `.npmrc` file with the given content:
-
-```sh
-# .npmrc
-#
-# Custom registry for @torian12321 packages.
-@torian12321:registry=https://npm.pkg.github.com
-```
+- 1.  Generate a `.npmrc` file based on the provided `.npmrc.example`. [Details](./docs/NPMRC_TOKEN.md)
 
 ## Installation
 
