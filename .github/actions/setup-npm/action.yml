@@ -28,6 +28,7 @@ runs:
         node-version: ${{ inputs.node-version }}
         registry-url: ${{ inputs.registry-url }}
         scope: ${{ inputs.scope }}
+        cache: 'npm'
 
     - name: 🔑 Prepare .npmrc from example
       run: |
