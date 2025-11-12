@@ -27,8 +27,6 @@ jobs:
 
       - name: 🔧 Setup NPM and Install Dependencies
         uses: ./.github/actions/setup-npm
-        with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: 📝 Build documentation
         run: npm run build:docs
