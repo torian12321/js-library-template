@@ -21,7 +21,7 @@ jobs:
       - name: 💅 Check formatting
         run: npm run format:check
 
-      - name: 📝 Check builds
+      - name: ⛏️ Build the library and documentation
         run: |
           npm run build &
           npm run build:docs &
